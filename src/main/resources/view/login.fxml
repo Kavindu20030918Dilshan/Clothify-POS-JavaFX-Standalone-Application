@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="698.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a48928" height="427.0" layoutX="5.0" layoutY="11.0" stroke="WHITE" strokeType="INSIDE" width="261.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8c8787" height="427.0" layoutX="269.0" layoutY="10.0" stroke="WHITE" strokeType="INSIDE" width="422.0" />
+      <ImageView fitHeight="199.0" fitWidth="192.0" layoutX="40.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/logo.jpeg" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtUsername" blendMode="MULTIPLY" focusColor="BLACK" layoutX="328.0" layoutY="174.0" prefHeight="25.0" prefWidth="305.0" promptText="Username" unFocusColor="BLACK">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="txtPassword" blendMode="MULTIPLY" layoutX="328.0" layoutY="242.0" prefHeight="25.0" prefWidth="305.0" promptText="Password" unFocusColor="BLACK">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXPasswordField>
+      <Label alignment="CENTER" blendMode="MULTIPLY" layoutX="328.0" layoutY="71.0" prefHeight="17.0" prefWidth="305.0" text=" Hello Welcome.">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Hyperlink alignment="CENTER" layoutX="328.0" layoutY="291.0" onAction="#hyperRegisterOnAction" prefHeight="23.0" prefWidth="305.0" text="Are you new? Register Now" textFill="#ffe229">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Hyperlink>
+      <JFXButton layoutX="403.0" layoutY="334.0" onAction="#btnLoginOnAction" prefHeight="1.0" prefWidth="155.0" ripplerFill="WHITE" text="Login" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <styleClass>
+            <String fx:value="btn" />
+            <String fx:value="table-row-cell" />
+            <String fx:value="textLabel" />
+         </styleClass>
+         <stylesheets>
+            <URL value="@../../../../../JavaFx_Thogakade/src/main/resources/css/style.css" />
+            <URL value="@../css/style.css" />
+         </stylesheets>
+      </JFXButton>
+      <JFXCheckBox fx:id="chkCheckbox1" layoutX="532.0" layoutY="233.0" onMousePressed="#showPswOnMousePressed" onMouseReleased="#showPswOnMouseReleased" text="Show Password">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </JFXCheckBox>
+   </children>
+</Pane>
