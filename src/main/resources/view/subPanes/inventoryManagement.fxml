@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="540.0" prefWidth="722.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.subpane.InventoryManagementFormController">
+   <children>
+      <Label layoutX="267.0" layoutY="14.0" text="Inventory Management">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="36.0" layoutY="127.0" text="Stock ID :">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblStockId" layoutX="113.0" layoutY="127.0" prefHeight="20.0" prefWidth="101.0" text="0000">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtStockPrice" layoutX="36.0" layoutY="166.0" prefHeight="26.0" prefWidth="205.0" promptText="Price" />
+      <JFXTextField fx:id="txtStockQty" layoutX="267.0" layoutY="166.0" prefHeight="26.0" prefWidth="198.0" promptText="Qty" />
+      <JFXComboBox fx:id="cmbSelectProduct" layoutX="490.0" layoutY="166.0" prefHeight="26.0" prefWidth="206.0" promptText="Select Product" />
+      <DatePicker fx:id="dtaDate" layoutX="31.0" layoutY="230.0" prefHeight="26.0" prefWidth="206.0" promptText="Select Date" />
+      <JFXButton layoutX="279.0" layoutY="228.0" onAction="#btnAddStockOnAction" prefHeight="30.0" prefWidth="129.0" style="-fx-background-color: black;" text="Add Product" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="427.0" layoutY="228.0" onAction="#btnUpdateStockOnAction" prefHeight="30.0" prefWidth="130.0" style="-fx-background-color: black;" text="Update Product" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="577.0" layoutY="228.0" onAction="#btnClearOnAction" prefHeight="30.0" prefWidth="108.0" style="-fx-background-color: black;" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblStock" layoutX="9.0" layoutY="326.0" prefHeight="200.0" prefWidth="706.0">
+         <columns>
+            <TableColumn fx:id="colID" prefWidth="75.0" text="ID" />
+            <TableColumn fx:id="colStockPrice" prefWidth="126.39996337890625" text="Price" />
+            <TableColumn fx:id="colStockQty" prefWidth="154.40000915527344" text="Qty" />
+            <TableColumn fx:id="colStockProduct" prefWidth="185.60003662109375" text="Product" />
+            <TableColumn fx:id="colStockDate" prefWidth="163.199951171875" text="Date" />
+         </columns>
+      </TableView>
+      <JFXTextField fx:id="txtSearchStock" layoutX="31.0" layoutY="289.0" prefHeight="26.0" prefWidth="206.0" promptText="Search Product Stock By Name" />
+   </children>
+</AnchorPane>
